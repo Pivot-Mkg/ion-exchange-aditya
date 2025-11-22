@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ion Exchange – Refreshing the Planet</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Swiper JS and CSS CDN -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper/swiper-bundle.min.css"
+/>
 </head>
 <body>
 
@@ -177,51 +182,113 @@
     </div>
 </section>
 
-<section class="case-studies">
+<section class="success-stories">
     <div class="container">
-        <h2>Case Studies</h2>
-        <div class="case-study">
-            <div class="case-study-image">
-                <img src="path-to-image.jpg" alt="Sustainability Case Study" />
-            </div>
-            <div class="case-study-content">
-                <h3>1. Engineering a Sustainable Tomorrow</h3>
-                <p>We are committed to developing innovative solutions that not only meet our clients' needs but also protect our planet’s most valuable resource. Our sustainability goals are at the core of everything we do, from reducing water consumption to minimizing environmental impact.</p>
-                <ul>
-                    <li>Promoting Water Reuse and Recycling</li>
-                    <li>Increasing Energy Efficiency in Operations</li>
-                    <li>Developing Eco-Friendly Chemical Alternatives</li>
-                </ul>
-            </div>
+        <div class="section-header">
+            <h2>Success Stories</h2>
+            <p>Real impact, measurable results</p>
         </div>
-        <div class="other-case-studies">
-            <div class="other-case-study">
-                <div class="other-case-study-image">
-                    <img src="path-to-image.jpg" alt="Dye Industry Case Study" />
+        
+        <!-- Swiper container -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Individual success cards inside swiper slides -->
+                <div class="swiper-slide">
+                    <div class="success-card">
+                        <div class="tag">
+                            <span>Oil & Gas</span>
+                        </div>
+                        <h3>95% Water Recycled for Major Refinery</h3>
+                        <p>Implemented advanced ZLD system for a petroleum refinery, recycling 95% of wastewater and saving ₹40 crore annually.</p>
+                        <div class="savings">
+                            <img src="./assets/images/graph.png" alt="Graph Icon" class="savings-icon">
+                            <span class="amount">₹40 Cr Saved Annually</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="other-case-study-content">
-                    <h4>2. Dye Industry Case Study</h4>
+                
+                <!-- Add more swiper-slide elements for future cards -->
+                <div class="swiper-slide">
+                    <!-- Another success card can go here -->
                 </div>
+
+                <!-- Add more swiper-slide elements as needed -->
             </div>
-            <div class="other-case-study">
-                <div class="other-case-study-image">
-                    <img src="path-to-image.jpg" alt="Electronics Case Study" />
-                </div>
-                <div class="other-case-study-content">
-                    <h4>3. Electronics Case Study</h4>
-                </div>
-            </div>
-            <div class="other-case-study">
-                <div class="other-case-study-image">
-                    <img src="path-to-image.jpg" alt="Chemical Case Study" />
-                </div>
-                <div class="other-case-study-content">
-                    <h4>4. Chemical Case Study</h4>
-                </div>
-            </div>
+            
+            <!-- Swiper Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </div>
 </section>
+
+<section class="contact">
+<section class="contact-section">
+  <div class="container">
+    <h1>Ready to improve your water and environmental outcomes?</h1>
+    <p>Let our experts design a solution tailored to your needs</p>
+  </div>
+  
+</section>
+<div class="content">
+    <form action="#" method="POST" class="contact-form">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <input type="text" name="company" placeholder="Company Name" />
+      </div>
+      <button type="submit">Talk to an Expert</button>
+    </form>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <img src="./assets/logo/ion-logo.png" alt="Ion Exchange Logo" class="footer-logo-img">
+      <p>Leading the future of water and environmental solutions with innovative technology and sustainable practices for over 60 years.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-section">
+        <h4>Solutions</h4>
+        <ul>
+          <li>Water Treatment</li>
+          <li>Wastewater Management</li>
+          <li>Waste to Energy</li>
+          <li>Chemicals & Resins</li>
+          <li>Services & O&M</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Industries</h4>
+        <ul>
+          <li>Manufacturing</li>
+          <li>Municipal</li>
+          <li>Institutions</li>
+          <li>Residential</li>
+          <li>All Industries</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li><img src="./assets/images/icons/phone-icon.png" alt="Phone Icon" class="footer-icon"> <a href="tel:+15551234567">+1 (555) 123-4567</a></li>
+          <li><img src="./assets/images/icons/locatioin-icon.png" alt="Location Icon" class="footer-icon"> 123 Water Solutions, Drive Innovation City, IC 12345</li>
+          <li><img src="./assets/images/icons/email.png" alt="Email Icon" class="footer-icon"> <a href="mailto:info@ionexchange.com">info@ionexchange.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="left">
+      <p>&copy; 2025 Ion Exchange. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </div>
+    <div class="right">
+      <p>Committed to sustainable water solutions for a better tomorrow.</p>
+    </div>
+  </div>
+</footer>
+
 
 
 
@@ -375,7 +442,22 @@ tabButtons.forEach(btn => {
   });
 </script>
 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    slidesPerView: 'auto',  // Show one card at a time (can be customized)
+    spaceBetween: 20, // Space between slides
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    // loop: false,  // Loop through cards
+    // autoplay: {
+    //   delay: 3000, // Auto-slide every 3 seconds
+    // }
+  });
+</script>
 
 
 </body>
