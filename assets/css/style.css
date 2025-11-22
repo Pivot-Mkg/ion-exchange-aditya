@@ -1155,3 +1155,43 @@ h2 {
 .learn-more-cta:hover::after {
     width: 100%;  /* Expand the underline to full width */
 }
+
+
+.footer-link {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 10px;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    width: fit-content;
+}
+
+/* Underline effect using ::after */
+.footer-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;  /* Position the underline just below the text */
+    left: 0;
+    width: 0;  /* Start with no underline */
+    height: 1px;  /* Height of the underline */
+    background-color: #0A1A2F;  /* Color of the underline */
+    background-color: white;  /* Color of the underline */
+    transition: width 0.3s ease;  /* Smooth transition for the underline */
+}
+
+/* On hover, expand the underline */
+.footer-link:hover::after {
+    width: 100%;  /* Expand the underline to full width on hover */
+}
+
+/* Style for links inside footer */
+.footer-link a {
+    color: #ccc;  /* Set default color for links */
+    text-decoration: none;  /* Remove underline from links */
+}
+
+/* On hover, change link color and apply underline animation */
+.footer-link a:hover {
+    color: #0A1A2F;  /* Change text color on hover */
+}
