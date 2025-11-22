@@ -71,6 +71,8 @@
 
 .custom-accordion-content p {
     line-height: 1.4;
+        color: black;
+
 }
 
 .custom-accordion-label-active {

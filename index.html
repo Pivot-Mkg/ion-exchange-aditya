@@ -5,11 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ion Exchange – Refreshing the Planet</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Swiper JS and CSS CDN -->
-<link
+<!-- <link
   rel="stylesheet"
   href="https://unpkg.com/swiper/swiper-bundle.min.css"
-/>
+/> -->
+
+
+<script>
+        $(document).ready(function () {
+            // Initially hide all accordion content
+            $(".custom-accordion-content").hide();
+            $(".custom-accordion-content").first().show()
+
+            // Handle click event on accordion label
+            $(".custom-accordion-label").on("click", function () {
+                var content = $(this).next(".custom-accordion-content");
+
+                // If the clicked accordion content is already visible, keep it open and remove the active class
+                if (content.is(":visible")) {
+                    // content.slideUp(); // Close the content
+                    // Do not remove the active class from the label
+                } else {
+                    // Close all other accordion contents
+                    $(".custom-accordion-content").slideUp();
+                    $(".custom-accordion-label").removeClass("custom-accordion-label-active"); // Remove active class from all labels
+
+                    // Open the clicked accordion
+                    content.slideDown();
+                    $(this).addClass("custom-accordion-label-active"); // Add active class to the clicked label
+                }
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
 </head>
 <body>
 
@@ -129,6 +161,150 @@
   </div>
 </section>
 
+<section class="swiper-section">
+        <div class="container">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <figure class="primary-swiper-card">
+                                <img width="100%" src="http://127.0.0.1:5500/assets/images/case-study-default.png"
+                                    alt="" srcset="">
+                                <figcaption class="primary-swiper-card-caption">
+                                    <div class="content">
+
+                                        <h1 class="primary-swiper-card-caption-item 
+                                primary-swiper-card-caption-item-name">Industry & Manufacturing</h1>
+                                        <p
+                                            class="primary-swiper-card-caption-item primary-swiper-card-caption-item-text">
+                                            Ion Exchange provides complete water and wastewater treatment solutions,
+                                            including
+                                            desalination, reuse, and waste-to-energy,for industries, institutions, and
+                                            municipalities.
+                                        </p>
+                                        <a href="#" class="primary-swiper-card-caption-cta">
+                                            Learn More
+                                        </a>
+                                    </div>
+
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="primary-swiper-card">
+                                <img width="100%" src="http://127.0.0.1:5500/assets/images/case-study-default.png"
+                                    alt="" srcset="">
+                                <figcaption class="primary-swiper-card-caption">
+                                    <div class="content">
+
+                                        <h1 class="primary-swiper-card-caption-item 
+                                primary-swiper-card-caption-item-name">Industry & Manufacturing</h1>
+                                        <p
+                                            class="primary-swiper-card-caption-item primary-swiper-card-caption-item-text">
+                                            Ion Exchange provides complete water and wastewater treatment solutions,
+                                            including
+                                            desalination, reuse, and waste-to-energy,for industries, institutions, and
+                                            municipalities.
+                                        </p>
+                                        <a href="#" class="primary-swiper-card-caption-cta">
+                                            Learn More
+                                        </a>
+                                    </div>
+
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="primary-swiper-card">
+                                <img width="100%" src="http://127.0.0.1:5500/assets/images/case-study-default.png"
+                                    alt="" srcset="">
+                                <figcaption class="primary-swiper-card-caption">
+                                    <div class="content">
+
+                                        <h1 class="primary-swiper-card-caption-item 
+                                primary-swiper-card-caption-item-name">Industry & Manufacturing</h1>
+                                        <p
+                                            class="primary-swiper-card-caption-item primary-swiper-card-caption-item-text">
+                                            Ion Exchange provides complete water and wastewater treatment solutions,
+                                            including
+                                            desalination, reuse, and waste-to-energy,for industries, institutions, and
+                                            municipalities.
+                                        </p>
+                                        <a href="#" class="primary-swiper-card-caption-cta">
+                                            Learn More
+                                        </a>
+                                    </div>
+
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="primary-swiper-card">
+                                <img width="100%" src="http://127.0.0.1:5500/assets/images/case-study-default.png"
+                                    alt="" srcset="">
+                                <figcaption class="primary-swiper-card-caption">
+                                    <div class="content">
+
+                                        <h1 class="primary-swiper-card-caption-item 
+                                primary-swiper-card-caption-item-name">Industry & Manufacturing</h1>
+                                        <p
+                                            class="primary-swiper-card-caption-item primary-swiper-card-caption-item-text">
+                                            Ion Exchange provides complete water and wastewater treatment solutions,
+                                            including
+                                            desalination, reuse, and waste-to-energy,for industries, institutions, and
+                                            municipalities.
+                                        </p>
+                                        <a href="#" class="primary-swiper-card-caption-cta">
+                                            Learn More
+                                        </a>
+                                    </div>
+
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="primary-swiper-card">
+                                <img width="100%" src="http://127.0.0.1:5500/assets/images/case-study-default.png"
+                                    alt="" srcset="">
+                                <figcaption class="primary-swiper-card-caption">
+                                    <div class="content">
+
+                                        <h1 class="primary-swiper-card-caption-item 
+                                primary-swiper-card-caption-item-name">Industry & Manufacturing</h1>
+                                        <p
+                                            class="primary-swiper-card-caption-item primary-swiper-card-caption-item-text">
+                                            Ion Exchange provides complete water and wastewater treatment solutions,
+                                            including
+                                            desalination, reuse, and waste-to-energy,for industries, institutions, and
+                                            municipalities.
+                                        </p>
+                                        <a href="#" class="primary-swiper-card-caption-cta">
+                                            Learn More
+                                        </a>
+                                    </div>
+
+                                </figcaption>
+                            </figure>
+                        </div>
+
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
+                    <!-- If we need navigation buttons -->
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+        </div>
+    </section>
+
 <!-- Our Story Section -->
 <section class="our-story">
   <div class="our-story-inner">
@@ -182,14 +358,111 @@
     </div>
 </section>
 
-<!-- Success Stories Section -->
+ <section class="case-study-section">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-header-title">Case Studies</h1>
+            </div>
+            <div class="featured-case-study-card-wrapper">
+                <figure class="featured-case-studies">
+                    <div class="img-wrapper">
+                        <img width="100%" src="./assets/images/case-study-default.png" alt="" srcset="">
+                    </div>
+                    <figcaption class="featured-case-studies-caption">
+                        <!-- Case Study 1 -->
+                        <div class="custom-accordion">
+                            <label for="caseStudy1" class="custom-accordion-label custom-accordion-label-active">
+                                <h1>Engineering a Sustainable Tomorrow</h1>
+                            </label>
+                            <div class="custom-accordion-content custom-accordion-content-active" id="caseStudy1">
+                                <p>
+                                    We are committed to developing innovative solutions that not only meet our clients'
+                                    needs but also protect our planet's most valuable resource. Our sustainability goals
+                                    are at the core of everything we do, from reducing water consumption to minimizing
+                                    environmental impact.
+                                </p>
+                                <ul>
+                                    <li>Promoting Water Reuse and Recycling</li>
+                                    <li>Increasing Energy Efficiency in Operations</li>
+                                    <li>Developing Eco-Friendly Chemical Alternatives</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Case Study 2 -->
+                        <div class="custom-accordion">
+                            <label for="caseStudy2" class="custom-accordion-label">
+                                <h1>Dye Industry Case Study</h1>
+                            </label>
+                            <div class="custom-accordion-content" id="caseStudy2">
+                                <p>
+                                    We are committed to developing innovative solutions that not only meet our clients'
+                                    needs but also protect our planet's most valuable resource. Our sustainability goals
+                                    are at the core of everything we do, from reducing water consumption to minimizing
+                                    environmental impact.
+                                </p>
+                                <ul>
+                                    <li>Promoting Water Reuse and Recycling</li>
+                                    <li>Increasing Energy Efficiency in Operations</li>
+                                    <li>Developing Eco-Friendly Chemical Alternatives</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Case Study 3 -->
+                        <div class="custom-accordion">
+                            <label for="caseStudy2" class="custom-accordion-label">
+                                <h1>
+                                    Electronics Case Study
+                                </h1>
+                            </label>
+                            <div class="custom-accordion-content" id="caseStudy2">
+                                <p>
+                                    We are committed to developing innovative solutions that not only meet our clients'
+                                    needs but also protect our planet's most valuable resource. Our sustainability goals
+                                    are at the core of everything we do, from reducing water consumption to minimizing
+                                    environmental impact.
+                                </p>
+                                <ul>
+                                    <li>Promoting Water Reuse and Recycling</li>
+                                    <li>Increasing Energy Efficiency in Operations</li>
+                                    <li>Developing Eco-Friendly Chemical Alternatives</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Case Study 4 -->
+                        <div class="custom-accordion">
+                            <label for="caseStudy2" class="custom-accordion-label">
+                                <h1>
+                                    Chemical Case Study
+                                </h1>
+                            </label>
+                            <div class="custom-accordion-content" id="caseStudy2">
+                                <p>
+                                    We are committed to developing innovative solutions that not only meet our clients'
+                                    needs but also protect our planet's most valuable resource. Our sustainability goals
+                                    are at the core of everything we do, from reducing water consumption to minimizing
+                                    environmental impact.
+                                </p>
+                                <ul>
+                                    <li>Promoting Water Reuse and Recycling</li>
+                                    <li>Increasing Energy Efficiency in Operations</li>
+                                    <li>Developing Eco-Friendly Chemical Alternatives</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+
+        </div>
+    </section>
+
 <section class="success-stories">
     <div class="container">
         <div class="section-header">
             <h2>Success Stories</h2>
             <p>Real impact, measurable results</p>
         </div>
-
+        
         <!-- Swiper container -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -207,11 +480,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- Additional slides can go here -->
-            </div>
+                
+                <!-- Add more swiper-slide elements for future cards -->
+                <div class="swiper-slide">
+                    <!-- Another success card can go here -->
+                </div>
 
-            <!-- Swiper Pagination -->
-            <div class="swiper-pagination"></div>
+                <!-- Add more swiper-slide elements as needed -->
+            </div>
             
             <!-- Swiper Navigation buttons -->
             <div class="swiper-button-next"></div>
@@ -219,7 +495,6 @@
         </div>
     </div>
 </section>
-
 
 <section class="contact">
 <section class="contact-section">
@@ -458,6 +733,48 @@ tabButtons.forEach(btn => {
   });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: false,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                // when window width is >= 480px
+                480: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 10
+                }
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+    </script>
 
 </body>
 </html>
