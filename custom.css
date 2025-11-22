@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "Blauer-Nue-Bold"; /* set name */
+  src: url(./fonts/Blauer-Nue/TrueType/BlauerNue-Bold.ttf); /* url of the font */
+}
+
+@font-face {
+  font-family: "Blauer-Nue-Medium"; /* set name */
+  src: url(./fonts/Blauer-Nue/TrueType/BlauerNue-Medium.ttf); /* url of the font */
+}
+
+@font-face {
+  font-family: "Blauer-Nue"; /* set name */
+  src: url(./fonts/Blauer-Nue/TrueType/BlauerNue-Regular.ttf); /* url of the font */
+}
+
+:root {
+    --Blauer-Nue : "Blauer-Nue"; /* use font */
+    --Blauer-Nue-Bold : "Blauer-Nue-Bold"; /* use font */
+}
+
+
+.section-header-title {
+  font-family:  "Blauer-Nue-Bold"; /* use font */
+    color: #142558;
+    text-align: center;
+}
+
+.section-header {
+    margin: 1em auto;
+}
+
+.featured-case-studies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3em;
+}
+
+
+.custom-accordion-label h1 {
+    font-size: 16px;
+    transition: .3s;
+    padding-top: 12px;
+    font-weight: 400!important;
+}
+
+
+.custom-accordion-label-active h1 {
+    font-size: 28px;
+    font-weight: bold!important;
+}
+
+.custom-accordion-content ul {
+    padding: 0;
+    margin: 1em 0 0 0;
+    list-style: none;
+    display: grid;
+    gap: 6px;
+}
+
+.custom-accordion-content {
+    padding: 0em 0 2em 0;
+}
+
+.custom-accordion-label {
+    border-top: 1px solid gray!important;
+    display: block;
+    padding-bottom: 1em;
+}
+
+.custom-accordion-content p {
+    line-height: 1.4;
+}
+
+.custom-accordion-label-active {
+    border-top: none!important;
+}
+
+
+.case-study-section .section-header {
+    margin-bottom: 2em;
+}
+
+.featured-case-study-card-wrapper {
+    max-width: 1024px;
+    margin: auto;
+}
