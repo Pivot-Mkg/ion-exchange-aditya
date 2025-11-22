@@ -10,39 +10,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
-$(document).ready(function () {
-    // Initially hide all accordion content
-    $(".custom-accordion-content").hide();
-    $(".custom-accordion-content").first().show()
+        $(document).ready(function () {
+            // Initially hide all accordion content
+            $(".custom-accordion-content").hide();
+            $(".custom-accordion-content").first().show()
 
-    // Handle click event on accordion label
-    $(".custom-accordion-label").on("click", function () {
-        var content = $(this).next(".custom-accordion-content");
+            // Handle click event on accordion label
+            $(".custom-accordion-label").on("click", function () {
+                var content = $(this).next(".custom-accordion-content");
 
-        // If the clicked accordion content is already visible, keep it open and remove the active class
-        if (content.is(":visible")) {
-            // content.slideUp(); // Close the content
-            // Do not remove the active class from the label
-        } else {
-            // Close all other accordion contents
-            $(".custom-accordion-content").slideUp(); 
-            $(".custom-accordion-label").removeClass("custom-accordion-label-active"); // Remove active class from all labels
+                // If the clicked accordion content is already visible, keep it open and remove the active class
+                if (content.is(":visible")) {
+                    // content.slideUp(); // Close the content
+                    // Do not remove the active class from the label
+                } else {
+                    // Close all other accordion contents
+                    $(".custom-accordion-content").slideUp();
+                    $(".custom-accordion-label").removeClass("custom-accordion-label-active"); // Remove active class from all labels
 
-            // Open the clicked accordion
-            content.slideDown();
-            $(this).addClass("custom-accordion-label-active"); // Add active class to the clicked label
-        }
-    });
-});
-
-
-
+                    // Open the clicked accordion
+                    content.slideDown();
+                    $(this).addClass("custom-accordion-label-active"); // Add active class to the clicked label
+                }
+            });
+        });
     </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 </head>
 
 <body>
-
-
     <section class="case-study-section">
         <div class="container">
             <div class="section-header">
@@ -141,9 +137,149 @@ $(document).ready(function () {
         </div>
     </section>
 
+    <section class="swiper-section">
+        <div class="container">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <figure class="primary-swiper-card">
+                                <img width="100%" src="http://127.0.0.1:5500/assets/images/case-study-default.png"
+                                    alt="" srcset="">
+                                <figcaption class="primary-swiper-card-caption">
+                                    <div class="content">
+
+                                        <h1 class="primary-swiper-card-caption-item 
+                                primary-swiper-card-caption-item-name">Industry & Manufacturing</h1>
+                                        <p
+                                            class="primary-swiper-card-caption-item primary-swiper-card-caption-item-text">
+                                            Ion Exchange provides complete water and wastewater treatment solutions,
+                                            including
+                                            desalination, reuse, and waste-to-energy,for industries, institutions, and
+                                            municipalities.
+                                        </p>
+                                        <a href="#" class="primary-swiper-card-caption-cta">
+                                            Learn More
+                                        </a>
+                                    </div>
+
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="primary-swiper-card">
+                                <img width="100%" src="http://127.0.0.1:5500/assets/images/case-study-default.png"
+                                    alt="" srcset="">
+                                <figcaption class="primary-swiper-card-caption">
+                                    <div class="content">
+
+                                        <h1 class="primary-swiper-card-caption-item 
+                                primary-swiper-card-caption-item-name">Industry & Manufacturing</h1>
+                                        <p
+                                            class="primary-swiper-card-caption-item primary-swiper-card-caption-item-text">
+                                            Ion Exchange provides complete water and wastewater treatment solutions,
+                                            including
+                                            desalination, reuse, and waste-to-energy,for industries, institutions, and
+                                            municipalities.
+                                        </p>
+                                        <a href="#" class="primary-swiper-card-caption-cta">
+                                            Learn More
+                                        </a>
+                                    </div>
+
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="primary-swiper-card">
+                                <img width="100%" src="http://127.0.0.1:5500/assets/images/case-study-default.png"
+                                    alt="" srcset="">
+                                <figcaption class="primary-swiper-card-caption">
+                                    <div class="content">
+
+                                        <h1 class="primary-swiper-card-caption-item 
+                                primary-swiper-card-caption-item-name">Industry & Manufacturing</h1>
+                                        <p
+                                            class="primary-swiper-card-caption-item primary-swiper-card-caption-item-text">
+                                            Ion Exchange provides complete water and wastewater treatment solutions,
+                                            including
+                                            desalination, reuse, and waste-to-energy,for industries, institutions, and
+                                            municipalities.
+                                        </p>
+                                        <a href="#" class="primary-swiper-card-caption-cta">
+                                            Learn More
+                                        </a>
+                                    </div>
+
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="primary-swiper-card">
+                                <img width="100%" src="http://127.0.0.1:5500/assets/images/case-study-default.png"
+                                    alt="" srcset="">
+                                <figcaption class="primary-swiper-card-caption">
+                                    <div class="content">
+
+                                        <h1 class="primary-swiper-card-caption-item 
+                                primary-swiper-card-caption-item-name">Industry & Manufacturing</h1>
+                                        <p
+                                            class="primary-swiper-card-caption-item primary-swiper-card-caption-item-text">
+                                            Ion Exchange provides complete water and wastewater treatment solutions,
+                                            including
+                                            desalination, reuse, and waste-to-energy,for industries, institutions, and
+                                            municipalities.
+                                        </p>
+                                        <a href="#" class="primary-swiper-card-caption-cta">
+                                            Learn More
+                                        </a>
+                                    </div>
+
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="primary-swiper-card">
+                                <img width="100%" src="http://127.0.0.1:5500/assets/images/case-study-default.png"
+                                    alt="" srcset="">
+                                <figcaption class="primary-swiper-card-caption">
+                                    <div class="content">
+
+                                        <h1 class="primary-swiper-card-caption-item 
+                                primary-swiper-card-caption-item-name">Industry & Manufacturing</h1>
+                                        <p
+                                            class="primary-swiper-card-caption-item primary-swiper-card-caption-item-text">
+                                            Ion Exchange provides complete water and wastewater treatment solutions,
+                                            including
+                                            desalination, reuse, and waste-to-energy,for industries, institutions, and
+                                            municipalities.
+                                        </p>
+                                        <a href="#" class="primary-swiper-card-caption-cta">
+                                            Learn More
+                                        </a>
+                                    </div>
+
+                                </figcaption>
+                            </figure>
+                        </div>
 
 
+                    </div>
+                    <!-- If we need pagination -->
+                    <!-- <div class="swiper-pagination"></div> -->
+                    <!-- If we need navigation buttons -->
+                    <!-- If we need scrollbar -->
+                    <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
 
+        </div>
+    </section>
 
     <script>
         const tabButtons = document.querySelectorAll(".ps-tab");
@@ -246,7 +382,6 @@ $(document).ready(function () {
         });
     </script>
 
-
     <script>
         const counters = document.querySelectorAll(".counter");
 
@@ -293,6 +428,48 @@ $(document).ready(function () {
         document.querySelector(".play-button").addEventListener("click", function () {
             window.location.href = "/assets/images/34097.jpg";  // or trigger modal
         });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            loop: false,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                // when window width is >= 480px
+                480: {
+                    slidesPerView: 3,
+                    spaceBetween: 30
+                },
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 10
+                }
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
     </script>
 </body>
 
