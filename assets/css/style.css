@@ -1109,3 +1109,8 @@ h2 {
 .footer-bottom a:hover {
   text-decoration: underline;
 }
+
+.swiper-section .section-header {
+    margin:3em;
+    
+}
