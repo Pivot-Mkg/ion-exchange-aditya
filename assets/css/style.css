@@ -1114,3 +1114,47 @@ h2 {
     margin:3em;
     
 }
+
+.learn-more-cta {
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 18px;
+
+}
+
+
+.learn-more-cta {
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    color: #0A1A2F;
+    font-weight: 500;
+    width: fit-content;
+}
+
+/* Underline effect using ::after */
+.learn-more-cta::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;  /* Position the line below the text */
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #0A1A2F;
+    transition: width 0.3s ease;  /* Smooth transition for the underline */
+}
+
+/* On hover, expand the underline */
+.learn-more-cta:hover::after {
+    width: 100%;  /* Expand the underline to full width */
+}
