@@ -40,6 +40,36 @@
     </script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
+    <style>
+        .nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    color: #0A1A2F;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;  /* Position the line just below the text */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #0A1A2F;
+    transition: width 0.3s ease;  /* Smooth transition for underline */
+}
+
+.nav-link:hover::after {
+    width: 100%;  /* Expand the underline to full width on hover */
+}
+
+    </style>
 
 </head>
 
@@ -51,12 +81,12 @@
             <img src="./assets/logo/ion-logo.png" class="logo" alt="Ion Exchange Logo">
 
             <nav class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">Product & Solutions</a>
-                <a href="#">Industries We Serve</a>
-                <a href="#">Innovations</a>
-                <a href="#">Sustainability</a>
-                <a href="#">Market Segments</a>
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Product & Solutions</a>
+                <a href="#" class="nav-link">Industries We Serve</a>
+                <a href="#" class="nav-link">Innovations</a>
+                <a href="#" class="nav-link">Sustainability</a>
+                <a href="#" class="nav-link">Market Segments</a>
 
                 <img src="./assets/images/Vector.svg" class="search-svg" alt="Search">
             </nav>
