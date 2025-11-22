@@ -108,6 +108,7 @@ body {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+  transition: all 0.5s ease;
 }
 
 .btn-secondary {
@@ -117,8 +118,26 @@ body {
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
+  transition: all 0.5s ease;
+}
+/* Hover effect for primary button */
+.btn-primary:hover {
+  background: white !important;
+  color: #0092d1 !important;
 }
 
+/* Hover effect for secondary button */
+.btn-secondary:hover {
+  background: white !important;
+  color: #0a1a2f !important;
+  border-color: white !important;
+}
+
+/* Ensure the phone icon changes color on hover */
+.btn-primary:hover .phone-icon {
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(166deg)
+    brightness(118%) contrast(119%);
+}
 /* Move hero content more left */
 .hero-content {
   position: relative;
@@ -179,7 +198,7 @@ body {
 }
 
 .ps-section {
-  padding: 100px 0; /* FIXED: more spacing */
+  padding: 70px 0; /* FIXED: more spacing */
   background: #fff;
 }
 
@@ -343,7 +362,7 @@ body {
   left: 0;
   width: 100%;
   height: 1px; /* Line height */
-  background-color: #0a1a2f; /* Color of the underline */
+  background-color: #1e8bff; /* Color of the underline */
 }
 
 /* Tab Menu */
@@ -504,7 +523,8 @@ body {
 /* Sustainability Section */
 .sustainability {
   background: #ffffff;
-  padding: 80px 20px;
+  padding: 30px 20px;
+  padding-top: 0;
   width: 100%;
 }
 
@@ -760,14 +780,28 @@ h2 {
   margin-top: 30px;
   color: white;
   text-align: left;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1); */
 }
 
 /* First success card */
 .success-stories .swiper-slide:nth-child(1) .success-card {
   background-image: url("../images/success-stories-slider-1.jpg");
 }
-
+.disc-cta{
+    display: flex;
+    justify-content: space-between;
+}
+.disc-cta
+.learn-more-cta{
+    color: #ffffff;
+}
+.success-stories .section-header-subtitle{
+    margin-bottom: 0;
+}
+.success-stories
+.section-header{
+    margin-bottom: 0;
+}
 /* Second success card */
 .success-stories .swiper-slide:nth-child(2) .success-card {
   background-image: url("../images/34097.jpg");
@@ -1147,8 +1181,9 @@ p {
   align-items: center;
   gap: 6px;
   position: relative;
-  color: #0a1a2f;
+  color: #0056b3;
   font-weight: 500;
+      /* border-bottom: 1px solid #00b477; */
   width: fit-content;
 }
 
@@ -1160,13 +1195,13 @@ p {
   left: 0;
   width: 0;
   height: 1px;
-  background-color: #0a1a2f;
+  background-color: #00b477;
   transition: width 0.3s ease; /* Smooth transition for the underline */
 }
 
 /* On hover, expand the underline */
 .learn-more-cta:hover::after {
-  width: 100%; /* Expand the underline to full width */
+  width: 100%; 
 }
 
 .footer-link {

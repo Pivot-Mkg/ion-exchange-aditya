@@ -169,14 +169,16 @@
     transform: translateY(10px);
     will-change: transform, opacity, max-height;
 }
-
+video{
+    height: 350px;
+}
 .primary-swiper-card-caption-cta {
     text-decoration: none;
     font-size: 14px;
     z-index: 1;
-    color: white;
+    color: #00b477;
     padding-bottom: 4px !important;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #ffffff;
     display: inline-block;
     margin-top: 8px;
     opacity: 0;
@@ -206,6 +208,23 @@
     max-height: 220px;
     transform: translateY(0);
     pointer-events: auto;
+}
+
+/* Make Learn More links always visible in sustainability section */
+.sustainability-card .primary-swiper-card-caption-cta {
+    opacity: 1 !important;
+    max-height: none !important;
+    transform: translateY(0) !important;
+       color: #007bff !important;
+    border-bottom-color: #007a4f!important;
+    margin-top: 15px !important;
+    display: inline-block !important;
+}
+
+/* Hover effect for sustainability card links */
+.sustainability-card .primary-swiper-card-caption-cta:hover {
+    color: #007a4f !important;
+    border-bottom-color: #007a4f !important;
 }
 
 /* Featured card height */
