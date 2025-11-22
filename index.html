@@ -42,33 +42,35 @@
 
     <style>
         .nav-links {
-    display: flex;
-    gap: 32px;
-}
+            display: flex;
+            gap: 32px;
+        }
 
-.nav-link {
-    position: relative;
-    text-decoration: none;
-    color: #0A1A2F;
-    font-weight: 500;
-    font-size: 16px;
-}
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+            color: #0A1A2F;
+            font-weight: 500;
+            font-size: 16px;
+        }
 
-.nav-link::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;  /* Position the line just below the text */
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #0A1A2F;
-    transition: width 0.3s ease;  /* Smooth transition for underline */
-}
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            /* Position the line just below the text */
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #0A1A2F;
+            transition: width 0.3s ease;
+            /* Smooth transition for underline */
+        }
 
-.nav-link:hover::after {
-    width: 100%;  /* Expand the underline to full width on hover */
-}
-
+        .nav-link:hover::after {
+            width: 100%;
+            /* Expand the underline to full width on hover */
+        }
     </style>
 
 </head>
@@ -348,7 +350,7 @@
             <div class="story-content">
                 <div class="story-img">
                     <!-- <img src="./assets/images/34097.jpg" alt="Water splash"> -->
-                    <video width="100%" height="auto"muted="" loop="" class="rounded overflow-hidden">
+                    <video width="100%" height="auto" muted="" loop="" class="rounded overflow-hidden">
                         <!-- <source src="./assets/videos/ZLD-transformation.mp4" type="video/mp4"> -->
                         <source
                             src="https://sandbox.pivotmkg.com/ion-exchange-kumar/assets/videos/ion-exchange-story.mp4"
@@ -433,10 +435,10 @@
                                     <li>Increasing Energy Efficiency in Operations</li>
                                     <li>Developing Eco-Friendly Chemical Alternatives</li>
                                 </ul>
-                               <a href="#" class="learn-more-cta">
-    Learn More
-    
-</a>
+                                <a href="#" class="learn-more-cta">
+                                    Learn More
+
+                                </a>
                             </div>
                         </div>
                         <!-- Case Study 2 -->
@@ -456,10 +458,10 @@
                                     <li>Increasing Energy Efficiency in Operations</li>
                                     <li>Developing Eco-Friendly Chemical Alternatives</li>
                                 </ul>
-                                 <a href="#" class="learn-more-cta">
-    Learn More
-    
-</a>
+                                <a href="#" class="learn-more-cta">
+                                    Learn More
+
+                                </a>
                             </div>
                         </div>
                         <!-- Case Study 3 -->
@@ -482,9 +484,9 @@
                                     <li>Developing Eco-Friendly Chemical Alternatives</li>
                                 </ul>
                                 <a href="#" class="learn-more-cta">
-    Learn More
-    
-</a>
+                                    Learn More
+
+                                </a>
                             </div>
                         </div>
                         <!-- Case Study 4 -->
@@ -506,10 +508,10 @@
                                     <li>Increasing Energy Efficiency in Operations</li>
                                     <li>Developing Eco-Friendly Chemical Alternatives</li>
                                 </ul>
-                               <a href="#" class="learn-more-cta">
-    Learn More
-    
-</a>
+                                <a href="#" class="learn-more-cta">
+                                    Learn More
+
+                                </a>
                             </div>
                         </div>
                     </figcaption>
@@ -526,10 +528,12 @@
                 <p>Real impact, measurable results</p>
             </div>
 
-            <!-- Swiper container -->
-            <div class="swiper-container">
+            <!-- Slider main container -->
+             <div class="swiper-container">
+                   <div class="swiper secondary-swiper">
+                <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
-                    <!-- Individual success cards inside swiper slides -->
+                    <!-- Slides -->
                     <div class="swiper-slide">
                         <div class="success-card">
                             <div class="tag">
@@ -544,19 +548,36 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Add more swiper-slide elements for future cards -->
                     <div class="swiper-slide">
-                        <!-- Another success card can go here -->
+                        <div class="success-card">
+                            <div class="tag">
+                                <span>Oil & Gas</span>
+                            </div>
+                            <h3>95% Water Recycled for Major Refinery</h3>
+                            <p>Implemented advanced ZLD system for a petroleum refinery, recycling 95% of wastewater and
+                                saving ₹40 crore annually.</p>
+                            <div class="savings">
+                                <img src="./assets/images/graph.png" alt="Graph Icon" class="savings-icon">
+                                <span class="amount">₹40 Cr Saved Annually</span>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- Add more swiper-slide elements as needed -->
                 </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
-                <!-- Swiper Navigation buttons -->
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+                <!-- If we need navigation buttons -->
+                
+
+                <!-- If we need scrollbar -->
+                <!-- <div class="swiper-scrollbar"></div> -->
             </div>
+            <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+             </div>
+         
+            
         </div>
     </section>
 
@@ -780,33 +801,19 @@
 
 
     <script>
-       
 
-      $(document).ready(function(){
-    $(".play-button").click(function(){
-        $("video").first()[0].play(); // Accessing the DOM element to play the video
-        $(this).hide(); // Hide the play button
-    });
-});
+
+        $(document).ready(function () {
+            $(".play-button").click(function () {
+                $("video").first()[0].play(); // Accessing the DOM element to play the video
+                $(this).hide(); // Hide the play button
+            });
+        });
 
     </script>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 'auto',  // Show one card at a time (can be customized)
-            spaceBetween: 20, // Space between slides
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            // loop: false,  // Loop through cards
-            // autoplay: {
-            //   delay: 3000, // Auto-slide every 3 seconds
-            // }
-        });
-    </script>
 
 
     <script>
@@ -849,8 +856,29 @@
         });
 
     </script>
+    <script>
+        const secondaryswiper = new Swiper('.secondary-swiper', {
+            // Optional parameters
+            loop: false,
 
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
 
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+
+    </script>
 
 </body>
 
