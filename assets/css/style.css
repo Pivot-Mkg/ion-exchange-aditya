@@ -65,6 +65,52 @@ body {
   background-position: center;
 }
 
+.hero-wave {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wave-svg {
+    width: 200%;  /* important for seamless flow */
+    height: 110px;
+}
+
+.wave {
+    fill: #ffffff;   /* color of bottom section */
+}
+
+.wave1 {
+    animation: waveMove 5s linear infinite;
+}
+
+.wave2 {
+    animation: waveMove2 5s linear infinite;
+}
+
+/* moves wave left → right continuously */
+@keyframes waveMove {
+    0%   { transform: translateX(0) translateY(0px); }
+    25%  { transform: translateX(-12%) translateY(14px); }
+    50%  { transform: translateX(-25%) translateY(25px); }
+    75%  { transform: translateX(-37%) translateY(14px); }
+    100% { transform: translateX(-50%) translateY(0px); }
+}
+
+@keyframes waveMove2 {
+    0%   { transform: translateX(0) translateY(4px); }
+    25%  { transform: translateX(-11%) translateY(18px); }
+    50%  { transform: translateX(-23%) translateY(35px); }
+    75%  { transform: translateX(-34%) translateY(18px); }
+    100% { transform: translateX(-45%) translateY(4px); }
+}
+
+
+
+
+
 .overlay {
   position: absolute;
   top: 0;
@@ -198,7 +244,7 @@ body {
 }
 
 .ps-section {
-  padding: 70px 0; /* FIXED: more spacing */
+  /* padding: 70px 0; FIXED: more spacing */
   background: #fff;
 }
 

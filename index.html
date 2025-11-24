@@ -119,8 +119,28 @@
             </div>
 
         </div>
+       <div class="hero-wave">
+    <svg class="wave-svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <defs>
+            <!-- Repeatable wave path -->
+            <path id="wavePath" d="
+                M0,40 
+                C150,80 350,0 600,40 
+                C850,80 1050,0 1200,40 
+                V120 H0 Z">
+        </defs>
+
+        <!-- 2 waves layered for seamless movement -->
+        <use href="#wavePath" class="wave wave1"></use>
+        <use href="#wavePath" class="wave wave2"></use>
+    </svg>
+</div>
+
+
+
     </section>
 
+    
     <section class="ps-section" data-aos="fade-up" data-aos-delay="100">
         <div class="ps-top">
             <h2 class="ps-title">Product & Solutions</h2>
@@ -641,21 +661,21 @@
                 <div class="footer-section">
                     <h4>Solutions</h4>
                     <ul>
-                        <li class="footer-link">Water Treatment</li>
-                        <li class="footer-link">Wastewater Management</li>
-                        <li class="footer-link">Waste to Energy</li>
-                        <li class="footer-link">Chemicals & Resins</li>
-                        <li class="footer-link">Services & O&M</li>
+                        <li class="footer-link"><a href="#">Water Treatment</a></li>
+                        <li class="footer-link"><a href="#">Wastewater Management</a></li>
+                        <li class="footer-link"><a href="#">Waste to Energy</a></li>
+                        <li class="footer-link"><a href="#">Chemicals & Resins</a></li>
+                        <li class="footer-link"><a href="#">Services & O&M</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Industries</h4>
                     <ul>
-                        <li class="footer-link">Manufacturing</li>
-                        <li class="footer-link">Municipal</li>
-                        <li class="footer-link">Institutions</li>
-                        <li class="footer-link">Residential</li>
-                        <li class="footer-link">All Industries</li>
+                        <li class="footer-link"><a href="#">Manufacturing</a></li>
+                        <li class="footer-link"><a href="#">Municipal</a></li>
+                        <li class="footer-link"><a href="#">Institutions</a></li>
+                        <li class="footer-link"><a href="#">Residential</a></li>
+                        <li class="footer-link"><a href="#">All Industries</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
