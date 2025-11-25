@@ -1,0 +1,483 @@
+/* --- LAYOUT --- */
+:root {
+  --primary: #2563eb;
+  /* Blue 600 */
+  --primary-dark: #1e40af;
+  /* Blue 800 */
+  --text-main: #0f172a;
+  /* Slate 900 */
+  --text-muted: #64748b;
+  /* Slate 500 */
+  --bg-body: #ffffff;
+  --font-sans: system-ui, -apple-system, sans-serif;
+  --card-radius: 24px;
+  --transition-speed: 0.8s;
+  --ease-soft: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  /* padding: 2rem 1rem; */
+}
+ 
+/* --- HEADING --- */
+.ind-container .header {
+  margin-bottom: 2rem;
+  padding-left: 0.5rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .ind-container .header {
+    text-align: left;
+    margin-bottom: 3rem;
+  }
+}
+
+.ind-container .header h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--text-main);
+}
+
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 3.75rem;
+  }
+}
+
+.header-line {
+  height: 6px;
+  width: 128px;
+  background-color: var(--primary);
+  border-radius: 999px;
+  margin-top: 1rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+  .header-line {
+    margin-inline: 0;
+  }
+}
+
+/* --- SLIDER CONTAINER --- */
+#slider-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: 500px;
+  align-items: stretch;
+  /* Mobile: stretch cards width */
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  #slider-container {
+    flex-direction: row;
+    height: 600px;
+    align-items: flex-end;
+    /* Desktop: align bottom */
+  }
+}
+
+/* --- CARD STYLES --- */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--card-radius);
+  transition: all var(--transition-speed) var(--ease-soft);
+  width: 100%;
+  /* Important for mobile */
+  /* Default State (Inactive) */
+  flex: 2;
+  height: 120px;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex: 1;
+    height: 80%;
+  }
+
+  .card:hover {
+    /* Slight grow on hover for inactive desktop cards */
+    /* transform: scale(1.02); removed to keep strictly geometric as requested */
+  }
+}
+
+/* --- ACTIVE STATE (The Big Card) --- */
+.card.active {
+  flex: 10;
+  /* Grow large */
+  height: 100%;
+  /* Full height */
+  cursor: default;
+}
+
+@media (min-width: 768px) {
+  .card.active {
+    flex: 3;
+    /* Ratio 3:1 on desktop */
+  }
+}
+
+/* --- CARD IMAGES --- */
+.card-bg-wrap {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s ease-out;
+}
+
+.card:hover .card-img {
+  transform: scale(1.05);
+}
+
+/* --- GRADIENTS --- */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  transition: opacity 0.7s ease;
+}
+
+/* Inactive Gradient: Darker, covers more */
+.card-overlay.inactive-gradient {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0.4),
+    transparent
+  );
+  opacity: 0.6;
+}
+
+.card:hover .card-overlay.inactive-gradient {
+  opacity: 0.8;
+}
+
+/* Active Gradient: Lighter, only at bottom */
+.card-overlay.active-gradient {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  opacity: 1;
+}
+
+/* --- CONTENT & TEXT --- */
+.card-content {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .card-content {
+    padding: 2rem;
+  }
+}
+
+.content-wrapper {
+  transform: translateY(0);
+  transition: transform 0.7s ease;
+}
+
+/* Adjust wrapper pos for inactive */
+.card:not(.active) .content-wrapper {
+  transform: translateY(8px);
+}
+
+/* Title */
+.card-title {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  transform-origin: left;
+  transition: all 0.5s ease;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Title Sizes */
+.card.active .card-title {
+  font-size: 23px;
+  margin-bottom: 1rem;
+}
+
+.card:not(.active) .card-title {
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .card.active .card-title {
+    font-size: 23px;
+  }
+
+  .card:not(.active) .card-title {
+    font-size: 18px;
+  }
+}
+
+/* Description & Link Wrapper */
+.expanded-content {
+  overflow: hidden;
+  transition: all 0.7s var(--ease-soft);
+}
+
+/* State: Open vs Closed */
+.card.active .expanded-content {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.card:not(.active) .expanded-content {
+  max-height: 0;
+  opacity: 0;
+}
+
+/* Inner Text Animations */
+.text-anim {
+  transition: all 0.6s ease-out;
+}
+
+/* Active: In place, visible */
+.card.active .text-anim {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Inactive: Pushed down, hidden */
+.card:not(.active) .text-anim {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.card-desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  /* Slate 200 */
+  margin-bottom: 1.5rem;
+  max-width: 36rem;
+  font-weight: 300;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 768px) {
+  .card-desc {
+    font-size: 1.125rem;
+  }
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 0.25rem;
+  transition: border-color 0.3s;
+}
+
+@media (min-width: 768px) {
+  .card-link {
+    font-size: 1rem;
+  }
+}
+
+.card-link:hover {
+  border-color: white;
+}
+
+.card-link i {
+  transition: transform 0.3s;
+}
+
+.card-link:hover i {
+  transform: translateX(4px);
+}
+
+/* Delay Staggering */
+.delay-100 {
+  transition-delay: 100ms;
+}
+
+.delay-200 {
+  transition-delay: 200ms;
+}
+
+/* Collapsed Indicator Line */
+.collapsed-indicator {
+  height: 4px;
+  width: 0;
+  background-color: var(--primary);
+  border-radius: 99px;
+  margin-top: 0.5rem;
+  transition: width 0.5s ease;
+}
+
+.card:not(.active):hover .collapsed-indicator {
+  width: 3rem;
+}
+
+.card.active .collapsed-indicator {
+  display: none;
+}
+
+/* --- CONTROLS --- */
+.controls-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 768px) {
+  .controls-area {
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+}
+
+.status-indicator {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Ordering for flex */
+.status-indicator {
+  order: 1;
+}
+
+.control-btns {
+  order: 2;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-prev {
+  background: #f1f5f9;
+  color: var(--text-main);
+}
+
+.btn-prev:hover {
+  background: #e2e8f0;
+}
+
+.btn-next {
+  background: var(--text-main);
+  color: white;
+}
+
+.btn-next:hover {
+  background: var(--primary);
+  transform: scale(1.05);
+}
+
+/* --- VIEW TRANSITIONS --- */
+::view-transition-group(*) {
+  animation-duration: 0.8s;
+  animation-timing-function: var(--ease-soft);
+}
+
+/* Disable default cross-fade for geometric morph */
+::view-transition-old(root),
+::view-transition-new(root) {
+}
+
+/* --- ANIMATIONS --- */
+.ping-dot {
+  position: relative;
+  display: flex;
+  height: 8px;
+  width: 8px;
+}
+
+.ping-animate {
+  position: absolute;
+  display: inline-flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-color: #60a5fa;
+  /* Blue 400 */
+  opacity: 0.75;
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.ping-static {
+  position: relative;
+  display: inline-flex;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  background-color: #3b82f6;
+  /* Blue 500 */
+}
+
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.status-active {
+  color: var(--primary);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.status-paused {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+.ind-container{
+    overflow: hidden!important;
+}
